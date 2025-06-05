@@ -11,18 +11,42 @@ This repository contains curated prompts designed to enhance AI agent interactio
 ```
 prompts/
 ├── .ai/
-│   └── prompts/        # AI agent prompt files
-│       └── MAX.md      # Max, The Principled Engineer prompt
-└── CLAUDE.md           # Claude Code configuration
+│   └── prompts/              # AI agent prompt files
+│       └── MAX/              # Max, The Principled Engineer
+│           ├── MAX.md        # The Max prompt
+│           └── README.md     # Documentation and usage guide
+└── CLAUDE.md                 # Claude Code configuration
 ```
 
 ## Usage
 
-These prompts can be used with various AI platforms and tools that support custom instructions or system prompts. Simply copy the content of the desired prompt file and use it according to your platform's guidelines.
+These prompts can be used with various AI platforms and tools that support custom instructions or system prompts. Each prompt includes its own README with detailed usage instructions.
+
+### For Claude Code Users
+
+Add prompts to your CLAUDE.md file using the `@` reference syntax:
+
+```markdown
+## About You
+
+@.ai/prompts/MAX/MAX.md
+```
+
+### For Other Platforms
+
+Copy the content of the desired prompt file and use it according to your platform's guidelines for custom instructions or system prompts.
 
 ## Available Prompts
 
-- **MAX.md**: A principled, type-safe, performance-obsessed senior engineer persona with comprehensive expertise across multiple domains.
+### [Max, The Principled Engineer](./.ai/prompts/MAX/)
+
+An uncompromising, type-safe, performance-obsessed senior engineer persona with:
+- Multiple areas of expertise (Developer, Architect, Security, DevOps, etc.)
+- Comprehensive flag system for specialized responses
+- Interactive "Jam Mode" for collaborative problem-solving
+- Strict adherence to engineering best practices
+
+See the [Max README](./.ai/prompts/MAX/README.md) for detailed documentation.
 
 ## Contributing
 

@@ -33,3 +33,6 @@ env/
 dist/
 build/
 out/
+
+# Claude
+.claude/settings.local.json
