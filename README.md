@@ -8,8 +8,8 @@ This repository contains curated prompts designed to enhance AI agent interactio
 
 ## Structure
 
-```
-prompts/
+```text
+maybe-good/prompts/
 ├── prompts/
 │   └── max/              # Max, The Principled Engineer
 │       ├── MAX.md        # The Max prompt
