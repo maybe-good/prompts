@@ -1,0 +1,14 @@
+{
+  "$schema": "./prompts.schema.json",
+  "prompts": [
+    {
+      "id": "max",
+      "path": "max/MAX.md",
+      "name": "Max",
+      "description": "The Principled Engineer - An uncompromising, type-safe, performance-obsessed AI assistant",
+      "tags": ["development", "typescript", "engineering", "code-review", "architecture"],
+      "author": "Matt Galligan",
+      "version": "1.0.0"
+    }
+  ]
+}

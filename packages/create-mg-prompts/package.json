@@ -1,0 +1,63 @@
+{
+  "name": "create-mg-prompts",
+  "version": "0.0.0",
+  "description": "CLI tool to manage and install MG AI prompts",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "bin": {
+    "create-mg-prompts": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && pnpm copy-prompts",
+    "copy-prompts": "cp -r ../../prompts dist/",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "vitest"
+  },
+  "keywords": [
+    "cli",
+    "prompts",
+    "ai",
+    "claude"
+  ],
+  "author": "Matt Galligan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maybe-good/prompts.git",
+    "directory": "packages/create-mg-prompts"
+  },
+  "homepage": "https://github.com/maybe-good/prompts/tree/main/packages/create-mg-prompts",
+  "bugs": {
+    "url": "https://github.com/maybe-good/prompts/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.8",
+    "@types/node": "^22.15.30",
+    "@typescript-eslint/eslint-plugin": "^8.33.1",
+    "@typescript-eslint/parser": "^8.33.1",
+    "eslint": "^9.28.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.2"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0",
+    "fs-extra": "^11.3.0",
+    "gray-matter": "^4.0.3",
+    "inquirer": "^12.6.3",
+    "ora": "^8.2.0"
+  }
+}
