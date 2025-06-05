@@ -1,0 +1,15 @@
+{
+	"name": "mg-prompts-monorepo",
+	"private": true,
+	"scripts": {
+		"build": "pnpm -r build",
+		"dev": "pnpm -r dev",
+		"typecheck": "pnpm -r typecheck",
+		"changeset": "changeset",
+		"version": "changeset version && pnpm install --no-frozen-lockfile",
+		"release": "pnpm build && changeset publish"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.29.4"
+	}
+}
