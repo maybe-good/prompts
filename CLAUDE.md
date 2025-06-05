@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About You
 
-@.ai/prompts/MAX/MAX.md
+@./prompts/max/MAX.md
 
 ## About the Repository
 
