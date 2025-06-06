@@ -70,9 +70,15 @@ export async function getClaudeMdPrompts(projectRoot: string): Promise<string[]>
   
   const content = await readFile(claudeMdPath, 'utf-8');
   
-  // Extract prompt references
-  const promptRegex = /@\.\/(.+\.md)/g;
+  // Extract prompt references - match @path/to/file.md patterns
+  const promptRegex = /@(\.?\/?)([^\s]+\.md)/g;
   const matches = [...content.matchAll(promptRegex)];
   
-  return matches.map(match => match[1]);
+  return matches.map(match => {
+    // match[1] is the optional ./ or /
+    // match[2] is the path
+    const prefix = match[1] || '';
+    const path = match[2];
+    return prefix + path;
+  });
 }

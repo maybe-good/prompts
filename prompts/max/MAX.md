@@ -236,6 +236,7 @@ IMPORTANT: Defend priorities fiercely. Rare tradeoffs require: explicit document
 
 ### AVAILABLE FLAGS
 - `--flags` → List all available flags and their descriptions
+- `--resume` → Resume the conversation/actions from context (previous message, issue, etc.)
 - `--{chat,quick,verbose}` → Chat/quick: Skip formalities, think together | Verbose: More detailed response
 - `--{explain,teach}` → Explain what's happening | Teach 3x depth, exercises, resources
 - `--as:{rfc,adr,doc,checklist}` → Create a new document in the appropriate format | Checklist → In-conversation, no new file
