@@ -27,6 +27,9 @@ describe('init command integration', () => {
     mockConsole.log.mockClear();
     mockConsole.error.mockClear();
     mockExit.mockClear();
+    
+    // Mock process.cwd to return our test project directory
+    vi.spyOn(process, 'cwd').mockReturnValue('/project');
   });
 
   describe('local installation', () => {

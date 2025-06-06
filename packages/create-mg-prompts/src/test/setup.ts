@@ -80,11 +80,15 @@ export function setupFileSystem(files: Record<string, string | Buffer>) {
 
 // Mock inquirer for non-interactive tests
 export function mockInquirer(answers: Record<string, any>) {
+  const inquirerMock = {
+    prompt: vi.fn().mockResolvedValue(answers),
+  };
+  
   vi.doMock('inquirer', () => ({
-    default: {
-      prompt: vi.fn().mockResolvedValue(answers),
-    },
+    default: inquirerMock,
   }));
+  
+  return inquirerMock;
 }
 
 // Mock ora spinner
@@ -117,3 +121,6 @@ vi.mock('chalk', () => ({
     bold: (str: string) => str,
   },
 }));
+
+// Export memfs for direct access in tests
+export { vol, memfs };

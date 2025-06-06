@@ -30,7 +30,7 @@ describe('paths utilities', () => {
       vi.mocked(platform).mockReturnValue('win32');
       vi.mocked(homedir).mockReturnValue('C:\\Users\\test');
       
-      const expectedPath = 'C:\\Users\\test\\AppData\\Roaming\\Claude';
+      const expectedPath = join('C:\\Users\\test', 'AppData', 'Roaming', 'Claude');
       setupFileSystem({
         [expectedPath]: '',
       });
